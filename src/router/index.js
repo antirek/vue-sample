@@ -4,9 +4,7 @@ import Home from "../views/Home.vue";
 import About from "../views/About.vue";
 
 import User from "../components/user.vue";
-import UserHome from "../components/user/home.vue";
-import UserProfile from "../components/user/profile.vue";
-import UserEdit from "../components/user/edit.vue";
+import UserRoutes from "../components/user/_routes";
 
 Vue.use(VueRouter);
 
@@ -16,23 +14,7 @@ const routes = [
   {
     path: "/user/:userId",
     component: User,
-    children: [
-      {
-        path: "",
-        component: UserHome,
-        name: "userHome"
-      },
-      {
-        path: "profile",
-        component: UserProfile,
-        name: "userProfile"
-      },
-      {
-        path: "edit",
-        component: UserEdit,
-        name: "userEdit"
-      }
-    ]
+    children: UserRoutes
   }
 ];
 

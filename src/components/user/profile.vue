@@ -14,7 +14,7 @@ export default {
   data: function() {
     return {
       profile: null,
-      profileUrl: "http://localhost:3102/user/"
+      profileUrl: this.$appUrl + "user/"
     };
   },
   watch: {
